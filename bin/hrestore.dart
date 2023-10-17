@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'load_config.dart';
-import 'restore.dart';
-import 'snapshot.dart';
+import 'restore/restore.dart';
+import 'snapshot/snapshot.dart';
 
 void main(List<String> arguments) async {
   print("HRestore v1.0.0 \"Initial Release\" (September 9, 2023)");
