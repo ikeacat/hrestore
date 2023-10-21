@@ -34,7 +34,8 @@ bool _moveChromeBackup() {
 
   final backupOperation =
       copyDirectorySync(backupDir.path, "hrestoredata\\Chrome\\Backup.old");
-  if (backupOperation.$1 != 0) {
+  if (backupOperation.$1 != 1 && backupOperation.$1 != 0) {
+    print(backupOperation.$1);
     print("\tChromeBackup operation stdout: ${backupOperation.$2}");
     print("\tChromeBackup operation ERROR stderr: ${backupOperation.$3}");
     stderr.write(

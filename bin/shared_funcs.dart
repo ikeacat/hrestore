@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:sqlite3/open.dart';
 
 (int, dynamic, dynamic) copyDirectorySync(String from, String to) {
-  final moveProc = Process.runSync("xcopy", ["/E", "/I", "/Y", from, to]);
+  final moveProc = Process.runSync("robocopy", [from, to], runInShell: false);
   return (moveProc.exitCode, moveProc.stdout, moveProc.stderr);
 }
 
