@@ -6,7 +6,9 @@ void chromeRestore() {
   print("Restoring Chrome data...");
 
   // STEP 1: Check the data exists that potentially is restored.
-  if (!_chromeDataCheck()) ;
+  if (!_chromeDataCheck()) {
+    return;
+  }
 
   // STEP 2: Kill Chrome
   if (!_killChrome()) {
