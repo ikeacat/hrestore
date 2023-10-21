@@ -2,7 +2,9 @@ import 'dart:io';
 
 import 'load_config.dart';
 import 'restore/restore.dart';
+import 'snapshot/drive.dart';
 import 'snapshot/snapshot.dart';
+import 'shared_funcs.dart';
 
 void main(List<String> arguments) async {
   print("HRestore v1.0.0 \"Initial Release\" (September 9, 2023)");
@@ -12,6 +14,14 @@ void main(List<String> arguments) async {
     print("HRestore is only supported on Windows, sorry!");
     exit(1);
   }
+
+  print("Checking for required files...");
+  if (!File("lib/sqlite3.dll").existsSync()) {
+    stderr.write("Failed to find lib/sqlite3.dll. Aborting.");
+    exit(2);
+  }
+
+  setupSqliteLibrary();
 
   print("Searching for and loading a configuration...");
   if (!File("hrestore.cfg").existsSync()) {
