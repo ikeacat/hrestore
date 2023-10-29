@@ -13,7 +13,10 @@ void driveSnapshot() {
 
   if (!_copyAccountDirectories()) {
     stderr.write(" Aborting.");
+    return;
   }
+
+  print("SUCCESS: Drive snapshot");
 }
 
 bool _copyAccountDirectories() {

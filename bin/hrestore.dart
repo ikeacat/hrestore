@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'load_config.dart';
 import 'restore/restore.dart';
-import 'snapshot/drive.dart';
 import 'snapshot/snapshot.dart';
 import 'shared_funcs.dart';
 
