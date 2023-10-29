@@ -1,13 +1,13 @@
 import 'dart:io';
 
-import 'load_config.dart';
+import 'config_store.dart';
 import 'restore/restore.dart';
 import 'snapshot/snapshot.dart';
 import 'shared_funcs.dart';
 
 void main(List<String> arguments) async {
-  print("HRestore v1.0.0 \"Initial Release\" (September 9, 2023)");
-  print("Made with love by Mason\n");
+  print("HRestore v1.0.0 \"Initial Release\" (TBD)");
+  print("Made with love\n");
 
   if (!Platform.isWindows) {
     print("HRestore is only supported on Windows, sorry!");

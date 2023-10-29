@@ -1,5 +1,5 @@
 import 'chrome.dart';
-import '../load_config.dart';
+import '../config_store.dart';
 import 'drive.dart';
 
 void snapshot() {
