@@ -99,7 +99,7 @@ bool _restoreChromeData() {
 
   final moveProc = copyDirectorySync("hrestoredata\\Chrome\\User Data",
       "${Platform.environment['LOCALAPPDATA']}\\Google\\Chrome\\User Data");
-  if (moveProc.$1 != 0) {
+  if (moveProc.$1 != 1) {
     print("\tDirectory copy output: ${moveProc.$2}");
     print("\tDirectory copy ERROR output: ${moveProc.$3}");
     stderr.write("Failed to copy files");

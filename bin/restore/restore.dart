@@ -7,7 +7,7 @@ void restore() {
     chromeRestore();
   }
 
-  if (ConfigStore.globalStore["RestoreDriveData"] == "true") {
+  if (ConfigStore.globalStore["RestoreDriveLogin"] == "true") {
     driveRestore();
   }
 }

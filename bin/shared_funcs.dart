@@ -23,18 +23,14 @@ bool killDriveProcess() {
   return true;
 }
 
-bool startDriveProcess() {
-  var taskkill = Process.runSync(
-      "C:\\Program Files\\Google\\Drive File Stream\\launch.bat", [],
-      runInShell: true);
-  if (taskkill.exitCode != 0) {
-    print("\tlaunch.bat code: ${taskkill.exitCode}");
-    print("\tlaunch.bat output: ${taskkill.stdout}");
-    print("\tlaunch.bat ERROR output: ${taskkill.stderr}");
-    stderr.write("Not sure if Google Drive was killed (non-zero exit code).");
-    return false;
+void startDriveProcess({bool announce = false, bool verbose = true}) async {
+  if (announce) {
+    print("Starting DriveFS...");
   }
-  return true;
+
+  await Process.start(
+      "C:\\Program Files\\Google\\Drive File Stream\\launch.bat", [],
+      runInShell: true, mode: ProcessStartMode.detached);
 }
 
 void setupSqliteLibrary() {
