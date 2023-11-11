@@ -52,3 +52,5 @@ void unzip() {
   }
   File("skeleton.zip").deleteSync();
 }
+
+void getLookupFile() {}

@@ -1,0 +1,40 @@
+{
+    "version": "v1.0.0-RC1",
+    "keys": [
+        {
+            "key": "Mode",
+            "description": "Sets the mode\nRESTORE: Kills the programs, restores their configs, and logs in.\nSNAPSHOT: Saves preferences and user data for restore later.\nHYBRID: Does restore, hangs around until exit, and then snapshots.",
+            "type": "choice",
+            "choices": [
+                "hybrid",
+                "snapshot",
+                "restore"
+            ],
+            "default": "hybrid"
+        },
+        {
+            "key": "RestoreChromeData",
+            "description": "Sets whether to restore backed up chrome data.",
+            "type": "boolean",
+            "default": "true"
+        },
+        {
+            "key": "SnapshotChromeData",
+            "description": "Sets whether to snapshot restore backed up chrome data.",
+            "type": "boolean",
+            "default": "false"
+        },
+        {
+            "key": "RestoreDriveLogin",
+            "description": "Sets whether to restore backed up drive login.",
+            "type": "boolean",
+            "default": "true"
+        },
+        {
+            "key": "SnapshotDriveLogin",
+            "description": "Sets whether to snapshot chrome data.",
+            "type": "boolean",
+            "default": "true"
+        }
+    ]
+}
