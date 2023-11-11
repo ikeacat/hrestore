@@ -5,7 +5,7 @@ a program that automates the login process for my Graphic Design class's compute
 ## Todo before launch
 
 - [X] Chrome
-- [ ] Drive
+- [X] Drive
 - [ ] Photoshop
 - [ ] Illustrator
 - [ ] InDesign
